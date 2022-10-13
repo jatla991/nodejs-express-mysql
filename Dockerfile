@@ -4,4 +4,5 @@ RUN apt-get update && apt-get install htop
 COPY package.json $HOME/
 RUN npm install
 COPY . $HOME/
+WORKDIR $HOME
 CMD ["node", "server.js"]
